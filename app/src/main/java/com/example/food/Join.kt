@@ -40,7 +40,7 @@ class Join : AppCompatActivity() {
             } else {
                 sqlDB = dbManager.readableDatabase
                 var cursor : Cursor
-                cursor = sqlDB.rawQuery("SELECT id FROM member WHERE id = '${join_id.text.toString()} ';", null)
+                cursor = sqlDB.rawQuery("SELECT id FROM member WHERE id = '"+join_id.text.toString()+"';", null)
 
                 if(cursor.moveToFirst()==false) {
                     flag=1
@@ -48,6 +48,7 @@ class Join : AppCompatActivity() {
                     cursor.close()
                     sqlDB.close()
                 } else {
+                    flag=0
                     Toast.makeText(this, "이미 존재하는 아이디입니다.", Toast.LENGTH_SHORT).show()
                     cursor.close()
                     sqlDB.close()
@@ -65,7 +66,7 @@ class Join : AppCompatActivity() {
                     Toast.makeText(this, "아이디 중복 검사를 해주세요.", Toast.LENGTH_SHORT).show()
                 } else {
                     sqlDB = dbManager.writableDatabase
-                    sqlDB.execSQL("INSERT INTO member VALUES ('${join_id.text.toString()}', '${join_pw.text.toString()}');")
+                    sqlDB.execSQL("INSERT INTO member VALUES ('"+join_id.text.toString()+"', '"+join_pw.text.toString()+"');")
                     sqlDB.close()
 
                     Toast.makeText(this, "회원가입이 완료되었습니다.", Toast.LENGTH_SHORT).show()

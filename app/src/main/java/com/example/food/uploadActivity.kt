@@ -80,7 +80,7 @@ class uploadActivity : AppCompatActivity() {
         if(photoUrl==null) {
             Toast.makeText(this,"사진을 선택해주세요", Toast.LENGTH_SHORT).show()
         } else {
-            sqlDB.execSQL("INSERT INTO allpost (id, diary, timestamp) VALUES ('${login_id}', '${upload_diary_text.text.toString()}', '${timestamp}');")
+            sqlDB.execSQL("INSERT INTO allpost (id, diary, timestamp) VALUES ('${login_id}', '"+upload_diary_text.text.toString()+"', '${timestamp}');")
 
             //이미지 바이트배열 저장
             var sql : String = "UPDATE ALLPOST SET image =? WHERE timestamp = '${timestamp}';"

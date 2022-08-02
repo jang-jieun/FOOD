@@ -43,7 +43,7 @@ class Login : AppCompatActivity() {
             } else {
                 sqlDB = dbManager.readableDatabase
                 var cursor : Cursor
-                cursor = sqlDB.rawQuery("SELECT password FROM member WHERE id = '${login_id.text.toString()}';", null)
+                cursor = sqlDB.rawQuery("SELECT password FROM member WHERE id = '"+login_id.text.toString()+"';", null)
 
                 if(cursor.moveToFirst()==false) {
                     Toast.makeText(this, "아이디가 존재하지 않습니다.", Toast.LENGTH_SHORT).show()

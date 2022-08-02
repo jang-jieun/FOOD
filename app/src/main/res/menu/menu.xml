@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_upload"
+        android:icon="@drawable/ic_tab_upload_image"
+        android:enabled="true"
+        android:title="upload" />
+    <item
+        android:id="@+id/action_home"
+        android:icon="@drawable/ic_tab_home_image"
+        android:enabled="true"
+        android:title="home" />
+    <item
+        android:id="@+id/action_mypage"
+        android:icon="@drawable/ic_tab_mypage_image"
+        android:enabled="true"
+        android:title="my" />
+</menu>

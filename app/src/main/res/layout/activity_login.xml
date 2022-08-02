@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".Login">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:gravity="center">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="16dp"
+            tools:layout_editor_absoluteX="47dp"
+            tools:layout_editor_absoluteY="250dp"
+            android:text="ID" />
+        <EditText
+            android:id="@+id/login_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            tools:layout_editor_absoluteX="128dp"
+            tools:layout_editor_absoluteY="243dp"
+            android:hint="아이디를 입력해주세요"
+            android:inputType="textPersonName"
+            android:text="" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_margin="8dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="16dp"
+            tools:layout_editor_absoluteX="48dp"
+            tools:layout_editor_absoluteY="299dp"
+            android:text="PW"/>
+        <EditText
+            android:id="@+id/login_pw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            tools:layout_editor_absoluteX="128dp"
+            tools:layout_editor_absoluteY="287dp"
+            android:inputType="textPassword"
+            android:hint="비밀번호를 입력해주세요"
+            android:text="" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_margin="8dp">
+        <Button
+            android:id="@+id/login_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            tools:layout_editor_absoluteX="78dp"
+            tools:layout_editor_absoluteY="358dp"
+            android:text="로그인" />
+
+        <Button
+            android:id="@+id/join_go_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="회원가입"
+            tools:layout_editor_absoluteX="202dp"
+            tools:layout_editor_absoluteY="357dp" />
+    </LinearLayout>
+
+</LinearLayout>
